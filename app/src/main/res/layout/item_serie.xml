@@ -21,62 +21,64 @@
         android:padding="16dp">
 
         <!-- Photo de la série -->
+
+        <!-- Nom de la série -->
+
         <ImageView
             android:id="@+id/imageViewSerie"
             android:layout_width="128dp"
             android:layout_height="86dp"
+            android:layout_marginBottom="8dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/astronaut"
-            android:layout_marginBottom="8dp"/>
+            android:src="@drawable/astronaut" />
 
-        <!-- Nom de la série -->
         <TextView
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:text="Agents of Shield"
             android:textColor="#FFFFFF"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="start|center_vertical">
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal">
 
-           <ImageView
+            <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_calendar_bicolor"
-                android:tint="#FFFFFF"/>
+                android:tint="#FFFFFF" />
 
             <!-- Texte de l'année de sortie -->
             <TextView
                 android:id="@+id/txtYear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="2022"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"/>
+                android:textSize="14sp" />
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
+                android:layout_marginStart="16dp"
                 android:src="@drawable/ic_tv_bicolor"
-                android:tint="#FFFFFF"
-                android:layout_marginStart="16dp"/>
+                android:tint="#FFFFFF" />
 
             <TextView
                 android:id="@+id/txtEpisodes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="20 épisodes"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"/>
+                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 

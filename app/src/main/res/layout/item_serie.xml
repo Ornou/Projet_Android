@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="#1E3243"
+    android:clipToPadding="true"
+    android:elevation="4dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:outlineProvider="bounds"
+    android:radius="20dp">
+
+    <!-- Conteneur principal pour les détails de la série -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Photo de la série -->
+        <ImageView
+            android:id="@+id/imageViewSerie"
+            android:layout_width="128dp"
+            android:layout_height="86dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/astronaut"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Nom de la série -->
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agents of Shield"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical">
+
+           <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_calendar_bicolor"
+                android:tint="#FFFFFF"/>
+
+            <!-- Texte de l'année de sortie -->
+            <TextView
+                android:id="@+id/txtYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_tv_bicolor"
+                android:tint="#FFFFFF"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/txtEpisodes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 épisodes"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

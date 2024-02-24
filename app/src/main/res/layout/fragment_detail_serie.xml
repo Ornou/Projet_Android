@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15232E">
+
+    <!-- Nom de la série -->
+    <TextView
+        android:id="@+id/txtSerieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom de la série"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Image de la série -->
+    <ImageView
+        android:id="@+id/imgSeries"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/astronaut"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/txtSerieTitle"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Icône TV et Nombre épisodes -->
+    <LinearLayout
+        android:id="@+id/layoutTvEpisodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtSerieTitle"
+        android:layout_toEndOf="@id/imgSeries"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp">
+
+        <ImageView
+            android:id="@+id/icTv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_tv_bicolor"
+            android:tint="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/txtEpisodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 épisodes"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Icône Calendrier et Année de sortie -->
+    <LinearLayout
+        android:id="@+id/layoutCalendarYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layoutTvEpisodes"
+        android:layout_toEndOf="@id/imgSeries"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp">
+
+        <ImageView
+            android:id="@+id/icCalendar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_calendar_bicolor"
+            android:tint="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/txtYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Bouton Histoire -->
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Histoire"
+        android:textColor="#FFFFFF"
+        android:background="?android:selectableItemBackground"
+        android:layout_below="@id/imgSeries"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Bouton Personnages -->
+    <Button
+        android:id="@+id/btnCharacters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Personnages"
+        android:textColor="#FFFFFF"
+        android:background="?android:selectableItemBackground"
+        android:layout_toEndOf="@id/btnHistory"
+        android:layout_alignBaseline="@id/btnHistory"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Bouton Épisodes -->
+    <Button
+        android:id="@+id/btnEpisodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Épisodes"
+        android:textColor="#FFFFFF"
+        android:background="?android:selectableItemBackground"
+        android:layout_toEndOf="@id/btnCharacters"
+        android:layout_alignBaseline="@id/btnHistory"
+        android:layout_marginEnd="16dp"/>
+
+</RelativeLayout>

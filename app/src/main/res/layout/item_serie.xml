@@ -1,85 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginEnd="16dp"
-    android:background="#1E3243"
-    android:clipToPadding="true"
-    android:elevation="4dp"
-    android:foreground="?android:attr/selectableItemBackground"
-    android:outlineProvider="bounds"
-    android:radius="20dp">
+    android:layout_margin="8dp"
+    android:background="#15232E"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp">
 
-    <!-- Conteneur principal pour les détails de la série -->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <!-- Photo de la série -->
-
-        <!-- Nom de la série -->
+        android:padding="16dp"
+        android:background="#1E3243">
 
         <ImageView
             android:id="@+id/imageViewSerie"
-            android:layout_width="128dp"
-            android:layout_height="86dp"
-            android:layout_marginBottom="8dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/astronaut"
             android:scaleType="centerCrop"
-            android:src="@drawable/astronaut" />
+            android:background="@android:color/white"
+            android:padding="4dp"
+            android:clipToOutline="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="16dp"/>
 
         <TextView
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="Agents of Shield"
+            android:layout_marginStart="16dp"
+            android:text="Nom de la série"
             android:textColor="#FFFFFF"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageViewSerie"
+            app:layout_constraintTop_toTopOf="@+id/imageViewSerie" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+
+        <ImageView
+            android:id="@+id/icTv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_tv_bicolor"
+            app:layout_constraintStart_toStartOf="@id/txtName"
+            app:layout_constraintTop_toBottomOf="@id/txtName"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/txtEpisodes"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start|center_vertical"
-            android:orientation="horizontal">
+            android:text="20 épisodes"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/icTv"
+            app:layout_constraintStart_toEndOf="@id/icTv"
+            android:layout_marginStart="4dp"/>
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_calendar_bicolor"
-                android:tint="#FFFFFF" />
 
-            <!-- Texte de l'année de sortie -->
-            <TextView
-                android:id="@+id/txtYear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="2022"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/icCalendar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_calendar_bicolor"
+            app:layout_constraintTop_toBottomOf="@id/icTv"
+            app:layout_constraintStart_toStartOf="@id/icTv"
+            android:layout_marginTop="8dp"/>
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/ic_tv_bicolor"
-                android:tint="#FFFFFF" />
+        <TextView
+            android:id="@+id/txtYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/icCalendar"
+            app:layout_constraintStart_toEndOf="@id/icCalendar"
+            android:layout_marginStart="4dp"/>
 
-            <TextView
-                android:id="@+id/txtEpisodes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="20 épisodes"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
-        </LinearLayout>
-    </LinearLayout>
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

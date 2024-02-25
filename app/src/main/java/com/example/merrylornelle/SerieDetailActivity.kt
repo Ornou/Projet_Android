@@ -8,10 +8,8 @@ class SerieDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_serie_detail)
 
-        // Afficher par défaut le fragment de l'histoire
         showHistoryFragment()
 
-        // Gérer les clics sur les boutons
         findViewById<View>(R.id.btnHistory).setOnClickListener {
             showHistoryFragment()
         }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/serieListFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.merrylornelle.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/serieListFragment"
+        android:name="com.example.merrylornelle.SerieListFragment"
+        android:label="SerieListFragment" >
+        <action
+            android:id="@+id/action_serieListFragment_to_serieDetailActivity"
+            app:destination="@id/serieDetailActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/serieDetailActivity"
+        android:name="com.example.merrylornelle.SerieDetailActivity"
+        android:label="SerieDetailActivity" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.merrylornelle.HistoryFragment"
+        android:label="HistoryFragment" />
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.example.merrylornelle.CharactersFragment"
+        android:label="CharactersFragment" />
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.example.merrylornelle.EpisodesFragment"
+        android:label="EpisodesFragment" />
+</navigation>

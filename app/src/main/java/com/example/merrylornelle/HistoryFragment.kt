@@ -20,10 +20,9 @@ class HistoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Récupérer les données de la série passées en argument
         val serie = arguments?.getParcelable<Serie>("serie")
 
-        // Mettre à jour le texte de l'histoire
+
         txtHistory.text = serie?.story ?: "Aucune histoire disponible"
     }
 }

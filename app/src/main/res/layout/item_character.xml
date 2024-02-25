@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#1E3243">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imgCharacter"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/astronaut"
+        android:scaleType="centerCrop"
+        android:layout_margin="8dp"
+        app:shapeAppearanceOverlay="@style/circleImageView" />
+
+    <TextView
+        android:id="@+id/txtCharacterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenna Simons"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"/>
+
+</LinearLayout>

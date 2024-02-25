@@ -17,10 +17,10 @@ class SerieAdapter(private val series: List<Serie>) : RecyclerView.Adapter<Serie
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val serie = series[position]
 
-        // Utiliser Glide pour charger l'image depuis l'URL
+
         Glide.with(holder.itemView.context)
-            .load("https://images.app.goo.gl/WMfGTSTMMVftFeaD7") // Remplacer serie.imageUrl par le champ approprié de votre modèle Serie
-            .placeholder(R.drawable.astronaut) // Image de remplacement en cas de chargement ou d'erreur
+            .load("https://images.app.goo.gl/WMfGTSTMMVftFeaD7")
+            .placeholder(R.drawable.astronaut)
             .into(holder.imageViewSerie)
         holder.bind(serie)
     }

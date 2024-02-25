@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#15232E"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#1E3243">
+
+        <!-- ImageView pour l'image de l'épisode -->
+        <ImageView
+            android:id="@+id/imageViewEpisode"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/astronaut"
+            android:scaleType="centerCrop"
+            android:background="@android:color/white"
+            android:padding="4dp"
+            android:clipToOutline="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- TextView pour le nom de l'épisode -->
+        <TextView
+            android:id="@+id/txtEpisodeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Episode 1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageViewEpisode"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEpisode" />
+
+        <!-- TextView pour le numéro de l'épisode -->
+        <TextView
+            android:id="@+id/txtEpisodeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Épisode 1"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/txtEpisodeName"
+            app:layout_constraintTop_toBottomOf="@+id/txtEpisodeName"
+            android:layout_marginTop="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

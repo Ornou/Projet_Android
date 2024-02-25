@@ -1,10 +1,12 @@
 package com.example.merrylornelle
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+
 class HistoryFragment : Fragment() {
 
     private lateinit var txtHistory: TextView
@@ -21,9 +23,12 @@ class HistoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Récupérer les données de la série passées en argument
-        val serie = arguments?.getParcelable<Serie>("serie")
+        val serie = arguments?.getParcelable<Parcelable>("serie")
 
         // Mettre à jour le texte de l'histoire
         txtHistory.text = serie?.story ?: "Aucune histoire disponible"
     }
 }
+
+
+

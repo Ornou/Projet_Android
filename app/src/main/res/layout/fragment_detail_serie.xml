@@ -119,4 +119,13 @@
         android:layout_alignBaseline="@id/btnHistory"
         android:layout_marginEnd="16dp"/>
 
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnEpisodes"
+        android:layout_marginTop="16dp"/>
+
 </RelativeLayout>
+
+

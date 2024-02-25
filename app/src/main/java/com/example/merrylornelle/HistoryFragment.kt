@@ -25,8 +25,7 @@ class HistoryFragment : Fragment() {
         // Récupérer les données de la série passées en argument
         val serie = arguments?.getParcelable<Parcelable>("serie")
 
-        // Mettre à jour le texte de l'histoire
-        txtHistory.text = serie?.story ?: "Aucune histoire disponible"
+
     }
 }
 
